@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     
+    <!-- SWIPER CSS LINK --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
@@ -259,10 +261,10 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="container testimonials__container">
+    <section class="container testimonials__container mySwiper">
         <h2>Student's Testimonials</h2>
-        <div>
-            <article class="testimonial">
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="images/avatar1.jpg">
                 </div>
@@ -278,7 +280,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar2.jpg">
                 </div>
@@ -294,7 +296,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar3.jpg">
                 </div>
@@ -310,7 +312,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar4.jpg">
                 </div>
@@ -326,7 +328,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar5.jpg">
                 </div>
@@ -342,9 +344,30 @@
                 </div>
             </article>
         </div>
+        <div class="swiper-pagination"></div>
     </section>
 
+    <!-- JS LINK -->
     <script src="script.js"></script>
+
+    <!-- SWIPER JS LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          },
+          // when window width is >= 600px
+          breakpoints: {
+            600: {
+                slidesPerView: 2
+            }
+          }
+        });
+    </script>
 </body>
 </html>
