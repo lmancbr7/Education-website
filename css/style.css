@@ -304,5 +304,5 @@ header{
     display: none;
 }
 .faq.open p{
-    display: none;
+    display: block;
 }
