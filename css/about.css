@@ -20,7 +20,7 @@
 }
 
 .achievement__card{
-    background: var(--color-bg2);
+    background: var(--color-bg1);
     padding: 1.6rem;
     border-radius: 1rem;
     text-align: center;
@@ -33,8 +33,8 @@
 }
 
 .achievement__icon{
-    background-color: var(--color-danger);
-    padding: 0.6rem;
+    background: var(--color-danger);
+    padding: 0.6rem 1rem;
     border-radius: 1rem;
     display: inline-block;
     margin-bottom: 2rem;
@@ -42,9 +42,13 @@
 }
 
 .achievement__card:nth-child(2) .achievement__icon{
-    background-color: var(--color-success);
+    background: var(--color-success);
 }
 
 .achievement__card:nth-child(3) .achievement__icon{
-    background-color: var(--color-primary);
+    background: var(--color-primary);
+}
+
+.achievement__card p{
+    margin-top: 1rem;
 }
